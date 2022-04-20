@@ -10,6 +10,7 @@ import { BroadcasterService } from "jslib-common/abstractions/broadcaster.servic
 import { CipherService } from "jslib-common/abstractions/cipher.service";
 import { CryptoService } from "jslib-common/abstractions/crypto.service";
 import { EventService } from "jslib-common/abstractions/event.service";
+import { FolderService } from "jslib-common/abstractions/folder.service";
 import { I18nService } from "jslib-common/abstractions/i18n.service";
 import { LogService } from "jslib-common/abstractions/log.service";
 import { MessagingService } from "jslib-common/abstractions/messaging.service";
@@ -42,6 +43,7 @@ export class ViewComponent extends BaseViewComponent {
 
   constructor(
     cipherService: CipherService,
+    folderService: FolderService,
     totpService: TotpService,
     tokenService: TokenService,
     i18nService: I18nService,
@@ -65,6 +67,7 @@ export class ViewComponent extends BaseViewComponent {
   ) {
     super(
       cipherService,
+      folderService,
       totpService,
       tokenService,
       i18nService,

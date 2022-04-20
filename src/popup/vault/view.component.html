@@ -373,6 +373,17 @@
       </div>
     </div>
   </div>
+  <div class="box">
+    <h2 class="box-header">
+      {{ "organization" | i18n }}
+    </h2>
+    <div class="box-content">
+      <div class="box-content-row" appBoxRow>
+        <label>{{ "folder" | i18n }}</label>
+        {{ folderName }}
+      </div>
+    </div>
+  </div>
   <div class="box" *ngIf="cipher.hasFields">
     <app-vault-view-custom-fields
       [cipher]="cipher"
