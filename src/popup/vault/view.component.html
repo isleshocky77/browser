@@ -382,6 +382,10 @@
         <label>{{ "folder" | i18n }}</label>
         {{ folderName }}
       </div>
+      <div class="box-content-row" appBoxRow *ngIf="cipher.hasCollections">
+        <label>{{ "collections" | i18n }}</label>
+        {{ collectionsList }}
+      </div>
     </div>
   </div>
   <div class="box" *ngIf="cipher.hasFields">

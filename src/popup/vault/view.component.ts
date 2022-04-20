@@ -8,6 +8,7 @@ import { ApiService } from "jslib-common/abstractions/api.service";
 import { AuditService } from "jslib-common/abstractions/audit.service";
 import { BroadcasterService } from "jslib-common/abstractions/broadcaster.service";
 import { CipherService } from "jslib-common/abstractions/cipher.service";
+import { CollectionService } from "jslib-common/abstractions/collection.service";
 import { CryptoService } from "jslib-common/abstractions/crypto.service";
 import { EventService } from "jslib-common/abstractions/event.service";
 import { FolderService } from "jslib-common/abstractions/folder.service";
@@ -43,6 +44,7 @@ export class ViewComponent extends BaseViewComponent {
 
   constructor(
     cipherService: CipherService,
+    collectionService: CollectionService,
     folderService: FolderService,
     totpService: TotpService,
     tokenService: TokenService,
@@ -67,6 +69,7 @@ export class ViewComponent extends BaseViewComponent {
   ) {
     super(
       cipherService,
+      collectionService,
       folderService,
       totpService,
       tokenService,
