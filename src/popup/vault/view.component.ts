@@ -15,6 +15,7 @@ import { FolderService } from "jslib-common/abstractions/folder.service";
 import { I18nService } from "jslib-common/abstractions/i18n.service";
 import { LogService } from "jslib-common/abstractions/log.service";
 import { MessagingService } from "jslib-common/abstractions/messaging.service";
+import { OrganizationService } from "jslib-common/abstractions/organization.service";
 import { PasswordRepromptService } from "jslib-common/abstractions/passwordReprompt.service";
 import { PlatformUtilsService } from "jslib-common/abstractions/platformUtils.service";
 import { StateService } from "jslib-common/abstractions/state.service";
@@ -45,6 +46,7 @@ export class ViewComponent extends BaseViewComponent {
   constructor(
     cipherService: CipherService,
     collectionService: CollectionService,
+    organizationService: OrganizationService,
     folderService: FolderService,
     totpService: TotpService,
     tokenService: TokenService,
@@ -83,6 +85,7 @@ export class ViewComponent extends BaseViewComponent {
       changeDetectorRef,
       eventService,
       apiService,
+      organizationService,
       passwordRepromptService,
       logService,
       stateService
